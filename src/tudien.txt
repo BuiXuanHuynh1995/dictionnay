@@ -1,2 +1,4 @@
-Hi;hdf;fa;fa
-Hello;gsf;gs;sf
+@anamorphosis /,ænə'mɔ:fəsis/;*danh từ;hình méo mó hình kỳ dị,(do gương chiếu ra),*ngoại động từ,sắp xếp vào một chỗ,sắp đặt theo thứ tự
+@collocate /'kɔləkeit/;*ngoại động từ;sắp xếp vào một chỗ,sắp đặt theo thứ tự
+@abrupt /ə'brʌpt/;*tính từ;bất ngờ, đột ngột,vội vã;
+@salary /'sæləri/;*  danh từ;- tiền lương=to draw one's salary+ lĩnh lương,*  ngoại động từ,  (thường) động tính từ quá khứ- trả lương"

@@ -5,7 +5,8 @@ import java.util.regex.Pattern;
 
 public class Controller {
      static LinkedList<Tu>tus=new LinkedList<>();
-    Tu tu;
+     static HashMap<String,Tu>hashMap=new HashMap<String, Tu>();
+    static Tu tu;
     static Scanner scanner =new Scanner(System.in);
 
 
@@ -34,13 +35,11 @@ public class Controller {
             matcher=pattern.matcher(tus.get(i).getTenTu());
             if (matcher.matches() && Character.toUpperCase(tus.get(i).getTenTu().charAt(0))==chuCai){
                 nhomTuCanTim.add(tus.get(i));
+                nhomTuCanTim.get(i).hienThi();
             }else {
                 System.out.println("Not found");
                 break;
             }
-        }
-        for (Tu nhomTuCanTim:tus) {
-            nhomTuCanTim.hienThi();
         }
     }
 
@@ -54,6 +53,10 @@ public class Controller {
                 System.out.println("Moi nhap ten tu:" );
                 String tenTu =scanner.nextLine();
                 tu.setTenTu(tenTu);
+
+                System.out.println("Moi nhap cach phat am");
+                String phatAm=scanner.nextLine();
+                tu.setPhatAm(phatAm);
 
                 System.out.println("Moi nhap tu loai:" );
                 String tuLoai =scanner.nextLine();
@@ -73,7 +76,7 @@ public class Controller {
 
     public void xoa(){
         timTuTheoChuCai();
-        System.out.println("moi nhap tu can tim:");
+        System.out.println("moi nhap tu can xoa:");
         scanner.nextLine();
         String tuCanXoa =scanner.nextLine();
         for (int i=0;i<nhomTuCanTim.size();i++){
@@ -89,13 +92,14 @@ public class Controller {
         System.out.println("moi nhap tu can tim:");
         scanner.nextLine();
         String tuCanTim =scanner.nextLine();
-        System.out.printf("%-15s%-15s%-15s","Ten Tu","Tu Loai","nghiaCuaTu"+"\n");
+        System.out.printf("%-15s%-30s%-20s-%50s","Ten tu","Phat am","Tu loai","nghiaCuaTu"+"\n");
         for (int i=0;i<nhomTuCanTim.size();i++) {
             if (nhomTuCanTim.get(i).getTenTu().equalsIgnoreCase(tuCanTim)) {
                 nhomTuCanTim.get(i).hienThi();
                 break;
             }else {
                 System.out.println("Not found");
+                break;
             }
         }
     }
@@ -107,7 +111,7 @@ public class Controller {
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
             String line = "";
             for (Tu tu : tus) {
-                line =tu.getTenTu() + ";"+ tu.getTuLoai() + ";"+ tu.getNghiaCuaTu()+"\n";
+                line =tu.getTenTu() + ";"+tu.getPhatAm()+";"+tu.getTuLoai() + ";"+ tu.getNghiaCuaTu()+"\n";
                 bufferedWriter.write(line);
                 bufferedWriter.flush();
             }
@@ -118,33 +122,32 @@ public class Controller {
         System.out.println("Ghi thanh cong");
     }
 
-    public void readFile() {
-        final String PATH = "E:\\codeGym\\dictionnary\\src\\tudien.txt";
-        BufferedReader bufferedReader = null;
-        String line = "";
-        String splitBy = ";";
-        String[] information;
+    public static void readFile() {
+        String filePath="E:\\codeGym\\dictionnary\\src\\tudien.txt";
+        File file = new File(filePath);
         try {
-            bufferedReader = new BufferedReader(new FileReader(PATH));
-            while ((line = bufferedReader.readLine()) != null) {
-                information = line.split(splitBy);
-                tu= new Tu(information[0], information[1], information[2]);
-                tus.add(tu);
+            FileReader fr = new FileReader(file);
+            BufferedReader br = new BufferedReader(fr);
+            String line = "";
+            String regex ="^(.+)(\\/.+\\/);(\\*.+);(.+)(.*?)$";
+            Pattern pattern = Pattern.compile(regex);
+            while ((line = br.readLine()) != null) {
+                Matcher matcher = pattern.matcher(line);
+                if (matcher.matches()) {
+                    String tenTu = matcher.group(1);
+                    String cachPhatAm = matcher.group(2);
+                    String tuLoai = matcher.group(3);
+                    String nghiaCuaTu= matcher.group(4);
+                    tu=new Tu(tenTu,cachPhatAm,tuLoai,nghiaCuaTu);
+                    tus.add(tu);
+                    hashMap.put(tenTu,tus.getLast());
+                }
             }
+            br.close();
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (NumberFormatException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
-        } finally {
-            if (bufferedReader != null) {
-                try {
-                    bufferedReader.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
         }
     }
 }

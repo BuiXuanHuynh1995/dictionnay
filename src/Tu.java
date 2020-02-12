@@ -4,14 +4,16 @@ import java.util.regex.Pattern;
 
 public class Tu {
     private String tenTu;
+    private String phatAm;
     private String tuLoai;
     private String nghiaCuaTu;
 
     public Tu() {
     }
 
-    public Tu(String tenTu, String tuLoai, String nghiaCuaTu) {
+    public Tu(String tenTu, String phatAm, String tuLoai, String nghiaCuaTu) {
         this.tenTu = tenTu;
+        this.phatAm = phatAm;
         this.tuLoai = tuLoai;
         this.nghiaCuaTu = nghiaCuaTu;
     }
@@ -63,9 +65,20 @@ public class Tu {
         }
     }
 
+    public String getPhatAm() {
+        return phatAm;
+    }
+
+    public void setPhatAm(String phatAm) {
+        this.phatAm = phatAm;
+    }
+
     public void nhapTu(){
         System.out.println("Moi nhap tu:" );
         setTenTu(scanner.nextLine());
+
+        System.out.println("Cach phat am:");
+        setPhatAm(scanner.nextLine());
 
         System.out.println("Tu loai: ");
         setTuLoai(scanner.nextLine());
@@ -75,6 +88,6 @@ public class Tu {
     }
 
     public void hienThi(){
-        System.out.printf("%-15s%-15s%-15s",tenTu,tuLoai,nghiaCuaTu+"\n");
+        System.out.printf("%-15s%-30s%-20s-%50s",tenTu,phatAm,tuLoai,nghiaCuaTu+"\n");
     }
 }
