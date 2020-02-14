@@ -5,10 +5,9 @@ import java.util.regex.Pattern;
 
 public class Controller {
      LinkedList<Tu> tuDien =new LinkedList<>();
-     HashMap<String,Tu>hashMap=new HashMap<String, Tu>();
+//     HashMap<String,Tu>hashMap=new HashMap<String, Tu>();
      Tu tu;
      Scanner scanner =new Scanner(System.in);
-
 
     public void hienThiDanhSachTu(){
         if (tuDien.size()==0){
@@ -57,7 +56,6 @@ public class Controller {
         for (int i = 0; i< nhomTuTheoChuCai.size(); i++) {
             if (nhomTuTheoChuCai.get(i).getTenTu().equalsIgnoreCase(tuCanTim)) {
                 nhomTuTheoChuCai.get(i).hienThi();
-                break;
             }else {
                 System.out.println("Khong tim thay");
             }
@@ -106,14 +104,13 @@ public class Controller {
                 nhomTuTheoChuCai.remove(i);
                 tuDien.remove(i);
                 hienThiDanhSachTu();
-                break;
             }else {
                 System.out.println("Khong tim thay");
             }
         }
     }
 
-    public void writeFileStudent() {
+    public void ghiFile() {
         final String PATH = "E:\\codeGym\\dictionnary\\src\\tuDienAnhViet.txt";
         try {
             FileWriter fileWriter = new FileWriter(PATH);
@@ -131,7 +128,7 @@ public class Controller {
         System.out.println("Ghi thanh cong");
     }
 
-    public void readFile() {
+    public void docFile() {
         String filePath="E:\\codeGym\\dictionnary\\src\\tudien.txt";
         File file = new File(filePath);
         try {
@@ -149,7 +146,7 @@ public class Controller {
                     String nghiaCuaTu= matcher.group(4);
                     tu=new Tu(tenTu,cachPhatAm,tuLoai,nghiaCuaTu);
                     tuDien.add(tu);
-                    hashMap.put(tenTu, tuDien.getLast());
+//                    hashMap.put(tenTu, tuDien.getLast());
                 }
             }
             br.close();
