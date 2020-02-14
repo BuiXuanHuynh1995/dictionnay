@@ -2,7 +2,7 @@
 
 @aollocate;/'kɔləkeit/;*  ngoại động từ;- sắp xếp vào một chỗ; sắp đặt theo thứ tự
 
-@abrupt;/ə'brʌpt/;*  tính từ;- bất ngờ, đột ngột; vội vã;=an abrupt turn+ chỗ ngoặc bất ngờ,=an abrupt departure+ sự ra đi vội vã (đột ngột),- cộc lốc, lấc cấc, thô lỗ
+@abrupt;/ə'brʌpt/;*  tính từ;- bất ngờ, đột ngột, vội vã,=an abrupt turn+ chỗ ngoặc bất ngờ,=an abrupt departure+ sự ra đi vội vã (đột ngột),- cộc lốc, lấc cấc, thô lỗ
 
 @salary;/'sæləri/;*  danh từ;- tiền lương,=to draw one's salary+ lĩnh lương;*  ngoại động từ,  (thường) động tính từ quá khứ,- trả lương
 
@@ -29,3 +29,38 @@
 @knottiness;/'nɔtnis/;*  danh từ;- tình trạng có nhiều nút,- tình trạng có nhiều mắt, tình trạng có nhiều đầu mấu,- (nghĩa bóng) tình trạng rắc rối, sự khó khăn, sự nan giải,sự khó giải thích
 
 @intervocalic;/,intəvou'kælik/;*  tính từ;- (ngôn ngữ học) giữa hai nguyên âm
+@museum;/mju:'ziəm/;*  danh từ;- nhà bảo tàng
+
+@gauche;/gouʃ/;*  tính từ;- vụng về
+
+@insomniac;/in'sɔmniæk/;*  tính từ;- (y học) bị chứng mất ngủ;- (thuộc) chứng mất ngủ,- làm mất ngủ,*  danh từ,- (y học) người bị chứng mất ngủ
+
+@embarrassing;/im'bærəsiɳ/;*  tính từ;- làm lúng túng;=an embarrassing situation+ tình trạng lúng túng,- ngăn trở
+
+@money-maker;/'mʌni,meikə/;*  danh từ;- người lo, làm tiền, người giỏi làm tiền,- món mang lợi
+
+@remand;/ri'mɑ:nd/;*  danh từ;- sự gửi trả (một người tù) về trại giam để điều tra thêm,=detention under remand+ sự giam tạm,=remand home+ nơi giam giữ tạn thời những tội phạm vị thành niên,*  ngoại động từ;- gửi trả (một người tù) về trại giam để điều tra thêm
+
+@lieutenant-commander;/lef'tenəntkə'mɑ:ndə/;*  danh từ;- (quân sự) thiếu tá hải quân
+
+@sea coal;/'si:'koul/;*  danh từ;- (từ cổ,nghĩa cổ) than đá, than mỏ
+
+@dockize;/'dɔkaiz/ (dockise) /'dɔkaiz/;*  ngoại động từ;- xây dựng (con sông) thành dãy bến tàu
+
+@unwinking;/' n'wi ki /;*  tính từ;- không nháy, không nháy mắt;- (nghĩa bóng) cnh giác
+
+@fucus;/'fju:kəs/;*  danh từ,  số nhiều fuci;- (thực vật học) tảo có đá, tảo thạch y
+
+@lowbrow;/'loubrau/;*  danh từ;- người ít học;*  tính từ;- ít học
+
+@occidentalist;/,ɔksi'dentəlist/;*  danh từ;- người theo văn minh phương tây
+
+@terra firma;/'terə'fə:mə/;*  danh từ;- đất liền (trái với biển)
+
+@occidentalism;/,ɔksi'dentəlizm/;*  danh từ;- văn minh phương Tây, văn minh Âu tây;- đặc tính Tây; đặc tính Âu Tây
+
+@supporting;/sə'pɔ:tiɳ/;*  tính từ;- chống, đỡ;- phụ;=supporting film+ phim phụ;=supporting actor+ diễn viên phụ
+
+@unabiding;/'ʌnə'baidiɳ/;*  tính từ;- không bền, nhất thời, không vĩnh cửu
+
+

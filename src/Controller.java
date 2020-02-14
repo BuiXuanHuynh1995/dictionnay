@@ -4,8 +4,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Controller {
-     LinkedList<Tu> tuDien =new LinkedList<>();
-//     HashMap<String,Tu>hashMap=new HashMap<String, Tu>();
+     ArrayList<Tu> tuDien =new ArrayList<>();
      Tu tu;
      Scanner scanner =new Scanner(System.in);
 
@@ -23,11 +22,12 @@ public class Controller {
         Tu tu = new Tu();
         tu.nhapTu();
         tuDien.add(tu);
+        hienThiDanhSachTu();
     }
 
     Pattern pattern;
     Matcher matcher;
-    LinkedList<Tu> nhomTuTheoChuCai =new LinkedList<>();
+    ArrayList<Tu> nhomTuTheoChuCai =new ArrayList<>();
     public void timTuTheoChuCai(){
         System.out.println("Nhap chu cai: ");
         Character chuCai =scanner.next().charAt(0);
@@ -35,7 +35,7 @@ public class Controller {
         pattern=Pattern.compile(regex);
         for (int i = 0; i < tuDien.size(); i++) {
             matcher=pattern.matcher(tuDien.get(i).getTenTu());
-            if (Character.toString(tuDien.get(i).getTenTu().charAt(0)).equalsIgnoreCase(String.valueOf(chuCai))){
+            if (matcher.matches()&&Character.toString(tuDien.get(i).getTenTu().charAt(0)).equalsIgnoreCase(String.valueOf(chuCai))){
                 nhomTuTheoChuCai.add(tuDien.get(i));
             }
         }
@@ -56,9 +56,10 @@ public class Controller {
         for (int i = 0; i< nhomTuTheoChuCai.size(); i++) {
             if (nhomTuTheoChuCai.get(i).getTenTu().equalsIgnoreCase(tuCanTim)) {
                 nhomTuTheoChuCai.get(i).hienThi();
-            }else {
-                System.out.println("Khong tim thay");
             }
+//            }else {
+//                System.out.println("Khong tim thay");
+//            }
         }
         nhomTuTheoChuCai.clear();
     }
@@ -93,31 +94,31 @@ public class Controller {
         }
     }
 
-    public void xoa(){
+    public void xoa() {
         nhomTuTheoChuCai.clear();
         timTuTheoChuCai();
         System.out.println("moi nhap tu can xoa:");
         scanner.nextLine();
-        String tuCanXoa =scanner.nextLine();
-        for (int i = 0; i< nhomTuTheoChuCai.size(); i++){
+        String tuCanXoa = scanner.nextLine();
+        for (int i = 0; i < nhomTuTheoChuCai.size(); i++) {
             if (nhomTuTheoChuCai.get(i).getTenTu().equalsIgnoreCase(tuCanXoa)) {
                 nhomTuTheoChuCai.remove(i);
                 tuDien.remove(i);
                 hienThiDanhSachTu();
-            }else {
-                System.out.println("Khong tim thay");
             }
+//            }else {
+//                System.out.println("Khong tim thay");
         }
     }
 
     public void ghiFile() {
-        final String PATH = "E:\\codeGym\\dictionnary\\src\\tuDienAnhViet.txt";
+        final String PATH = "E:\\codeGym\\dictionnary\\src\\tudien.txt";
         try {
-            FileWriter fileWriter = new FileWriter(PATH);
+            FileWriter fileWriter = new FileWriter(PATH,true);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
             String line = "";
             for (Tu tu : tuDien) {
-                line =tu.getTenTu() + ";"+tu.getPhatAm()+";"+tu.getTuLoai() + ";"+ tu.getNghiaCuaTu()+"\n";
+                line ="\n"+"@"+tu.getTenTu() + ";"+tu.getPhatAm()+";"+tu.getTuLoai() + ";"+ tu.getNghiaCuaTu()+"\n";
                 bufferedWriter.write(line);
                 bufferedWriter.flush();
             }
@@ -135,7 +136,7 @@ public class Controller {
             FileReader fr = new FileReader(file);
             BufferedReader br = new BufferedReader(fr);
             String line = "";
-            String regex ="@(.+);(\\/.+\\/);(\\*.+);(.+)(.*?)";
+            String regex ="@(.+);(\\/.+\\/);(\\*.+);(.+)";
             Pattern pattern = Pattern.compile(regex);
             while ((line = br.readLine()) != null) {
                 Matcher matcher = pattern.matcher(line);
@@ -146,7 +147,6 @@ public class Controller {
                     String nghiaCuaTu= matcher.group(4);
                     tu=new Tu(tenTu,cachPhatAm,tuLoai,nghiaCuaTu);
                     tuDien.add(tu);
-//                    hashMap.put(tenTu, tuDien.getLast());
                 }
             }
             br.close();

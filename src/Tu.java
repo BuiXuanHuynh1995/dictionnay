@@ -57,7 +57,7 @@ public class Tu {
     }
 
     public void setTuLoai(String tuLoai) {
-        String regex ="^[a-zA-Z]{1,50}$";
+        String regex ="^[a-z\\sA-Z]{1,50}$";
         pattern=Pattern.compile(regex);
         matcher=pattern.matcher(tuLoai);
         while (!matcher.matches()){
@@ -72,7 +72,7 @@ public class Tu {
     }
 
     public void setNghiaCuaTu(String nghiaCuaTu) {
-        String regex ="^[a-zA-Z]{1,50}$";
+        String regex ="^[a-zA-Z\\s]{1,50}$";
         pattern=Pattern.compile(regex);
         matcher=pattern.matcher(nghiaCuaTu);
         while (!matcher.matches()){
