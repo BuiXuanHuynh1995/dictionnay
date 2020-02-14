@@ -1,4 +1,31 @@
-@anamorphosis /,ænə'mɔ:fəsis/;*danh từ;hình méo mó hình kỳ dị,(do gương chiếu ra),*ngoại động từ,sắp xếp vào một chỗ,sắp đặt theo thứ tự
-@collocate /'kɔləkeit/;*ngoại động từ;sắp xếp vào một chỗ,sắp đặt theo thứ tự
-@abrupt /ə'brʌpt/;*tính từ;bất ngờ, đột ngột,vội vã;
-@salary /'sæləri/;*  danh từ;- tiền lương=to draw one's salary+ lĩnh lương,*  ngoại động từ,  (thường) động tính từ quá khứ- trả lương"
+@anamorphosis;/,ænə'mɔ:fəsis/;*  danh từ;- hình méo mó, hình kỳ dị (do gương chiếu ra);- (sinh vật học) sự tiệm biến
+
+@aollocate;/'kɔləkeit/;*  ngoại động từ;- sắp xếp vào một chỗ; sắp đặt theo thứ tự
+
+@abrupt;/ə'brʌpt/;*  tính từ;- bất ngờ, đột ngột; vội vã;=an abrupt turn+ chỗ ngoặc bất ngờ,=an abrupt departure+ sự ra đi vội vã (đột ngột),- cộc lốc, lấc cấc, thô lỗ
+
+@salary;/'sæləri/;*  danh từ;- tiền lương,=to draw one's salary+ lĩnh lương;*  ngoại động từ,  (thường) động tính từ quá khứ,- trả lương
+
+@inflatable;/in'fleitəbl/;*  tính từ;- có thể bơm phồng, có thể thổi phồng
+
+@secundum quid;/si'kʌndəmkwid/;*  phó từ;- về một mặt nào đó, về phương diện nào đó
+
+@stibium;/stibium/;*  danh từ;- (hoá học) Antimon
+
+@blameworthy;/'bleim,wə:ði/ (blameful) /'bleimful/;*  tính từ;- đáng khiển trách, đáng trách mắng
+
+@burst-up;/'bə:st'ʌp/;*  danh từ;- (thông tục) sự suy sụp
+
+@stonily;/'stounili/;*  phó từ;- chằm chằm (nhìn), lạnh lùng, vô tình, chai đá, nhẫn tâm
+
+@grade teacher;/'greid'ti:tʃə/;*  danh từ,- giáo viên phổ thông
+
+@venose;/'vi:nous/;*  tính từ;- (thực vật học) có gân,có gân rõ
+
+@order-cleck;/'ɔ:dəkɑ:k/;*  danh từ;- thư ký nhận đơn đặt hàng
+
+@bracteal;/'bræktiəl/;*  tính từ;- (thực vật học) (thuộc) lá bắc
+
+@knottiness;/'nɔtnis/;*  danh từ;- tình trạng có nhiều nút,- tình trạng có nhiều mắt, tình trạng có nhiều đầu mấu,- (nghĩa bóng) tình trạng rắc rối, sự khó khăn, sự nan giải,sự khó giải thích
+
+@intervocalic;/,intəvou'kælik/;*  tính từ;- (ngôn ngữ học) giữa hai nguyên âm

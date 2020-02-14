@@ -25,6 +25,7 @@ public class Tu {
     Pattern pattern;
     Matcher matcher;
     Scanner scanner =new Scanner(System.in);
+
     public void setTenTu(String tenTu) {
         String regex ="^[a-zA-Z]{1,50}$";
         pattern=Pattern.compile(regex);
@@ -33,7 +34,22 @@ public class Tu {
             System.out.println("Nhap sai dinh dang!Moi nhap lai:");
             this.setTenTu(scanner.nextLine());
         }
-            this.tenTu = tenTu;
+        this.tenTu = tenTu;
+    }
+
+    public String getPhatAm() {
+        return phatAm;
+    }
+
+    public void setPhatAm(String phatAm) {
+        String regex ="^[a-zA-Z]{1,50}$";
+        pattern=Pattern.compile(regex);
+        matcher=pattern.matcher(phatAm);
+        while (!matcher.matches()){
+            System.out.println("Nhap sai dinh dang!Moi nhap lai:");
+            this.setPhatAm(scanner.nextLine());
+        }
+        this.phatAm = phatAm;
     }
 
     public String getTuLoai() {
@@ -43,7 +59,7 @@ public class Tu {
     public void setTuLoai(String tuLoai) {
         String regex ="^[a-zA-Z]{1,50}$";
         pattern=Pattern.compile(regex);
-        matcher=pattern.matcher(tenTu);
+        matcher=pattern.matcher(tuLoai);
         while (!matcher.matches()){
             System.out.println("Nhap sai dinh dang!Moi nhap lai:");
             this.setTuLoai(scanner.nextLine());
@@ -58,19 +74,12 @@ public class Tu {
     public void setNghiaCuaTu(String nghiaCuaTu) {
         String regex ="^[a-zA-Z]{1,50}$";
         pattern=Pattern.compile(regex);
-        matcher=pattern.matcher(tenTu);
+        matcher=pattern.matcher(nghiaCuaTu);
         while (!matcher.matches()){
             System.out.println("Nhap sai dinh dang!Moi nhap lai:");
             this.setNghiaCuaTu(scanner.nextLine());
         }
-    }
-
-    public String getPhatAm() {
-        return phatAm;
-    }
-
-    public void setPhatAm(String phatAm) {
-        this.phatAm = phatAm;
+        this.nghiaCuaTu = nghiaCuaTu;
     }
 
     public void nhapTu(){
@@ -88,6 +97,6 @@ public class Tu {
     }
 
     public void hienThi(){
-        System.out.printf("%-15s%-30s%-20s-%50s",tenTu,phatAm,tuLoai,nghiaCuaTu+"\n");
+        System.out.printf("%-15s%-30s%-20s%-20s",tenTu,phatAm,tuLoai,nghiaCuaTu+"\n");
     }
 }
